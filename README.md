@@ -8,5 +8,7 @@ Data was fetched from [NewsApi](https://newsapi.org/docs/get-started). Articles 
 ## Summarizer App
 A Text Summarizer app was created using Flask, FlaskForm and HuggingFace Transformer's BART model. More about HuggingFace BART model can be found [here](https://huggingface.co/transformers/model_doc/bart.html)
 
-![screen1](./assets/screen1.png)
-![screen2](./assets/screen2.png)
+![screen1](https://github.com/jinudaniel/covid19-articles-analysis/blob/master/assets/screen1.PNG)
+  
+#### Output
+![screen2](https://github.com/jinudaniel/covid19-articles-analysis/blob/master/assets/screen2.PNG)
