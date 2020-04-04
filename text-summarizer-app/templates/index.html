@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>Text Summarization</title>
+  </head>
+  <body>
+    <div class="">
+        <div class="row">
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-10">
+                <center>
+                    <h3 class="header">Text Summarization</h3>
+                    <p> <b>Model</b>: BART</p>
+                </center>
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
+                <h4>Input Text</h4>
+                    {{ form.text(class="form-control txt_input") }}
+                <br />
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        {{ form.beam_search.label(class="form-control-label") }} 
+                        {{ form.beam_search(class="form-control") }} 
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        {{ form.num_words.label(class="form-control-label") }} 
+                        {{ form.num_words(class="form-control") }}
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <br />
+                        {{ form.submit(class="btn btn-primary btn-lg") }}
+                    </div>
+                </div>
+                </form>
+                <br />
+                <br />
+                <h4> Summary </h4>
+                <textarea class="form-control txt_summary" id="input_summary" readonly>
+                    {% if response %}
+                    {{ response }}
+           {% endif %}   
+                </textarea>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

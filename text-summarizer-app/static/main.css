@@ -1,0 +1,25 @@
+.header {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  background: #007bff;
+  padding: 13px;
+  line-height: 30px;
+  color: white;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+.row {
+  margin-top: 10px;
+}
+
+.txt_input {
+  height: 100px !important;
+}
+
+.txt_summary {
+  height: 80px !important;
+}
