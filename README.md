@@ -12,3 +12,12 @@ A Text Summarizer app was created using Flask, FlaskForm and HuggingFace Transfo
   
 #### Output
 ![screen2](https://github.com/jinudaniel/covid19-articles-analysis/blob/master/assets/screen2.PNG)
+
+## Text Generator App
+A language model app to predict the next words given an input was created using Flask and HuggingFace Transformer's GPT2 model.
+
+![lm_screen1](https://github.com/jinudaniel/covid19-articles-analysis/blob/master/assets/lm_screen1.PNG)
+
+#### Output
+![lm_screen2](https://github.com/jinudaniel/covid19-articles-analysis/blob/master/assets/lm_screen2.PNG)
+
